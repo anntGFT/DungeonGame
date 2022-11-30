@@ -36,4 +36,31 @@ public class SolutionTest {
 
         assertEquals(result, solution.calculateMinimumHP(dungeon));
     }
+
+    @Test
+    public void dungeonWIthThreeRowsAndThreeColumns(){
+
+        result = 7;
+        dungeon = new int[][] {{-2,-3,3},{-5,-10,1},{10,30,-5}};
+
+        assertEquals(result, solution.calculateMinimumHP(dungeon));
+    }
+
+    @Test
+    public void dungeonWIthFiveRowsAndFiveColumns(){
+
+        result = 6;
+        dungeon = new int[][] {{-2,-3,3,-4,1},{-5,-10,1,1,-1},{10,30,-5,4,-6}, {-5,2,-4,-1,9}, {-3,-1,-6,4,5}};
+
+        assertEquals(result, solution.calculateMinimumHP(dungeon));
+    }
+
+    @Test
+    public void dungeonWIthFiveRowsAndFourColumns(){
+
+        result = 3;
+        dungeon = new int[][] {{-2,-3,3,-4,1},{10,30,-5,4,-6}, {-5,2,-4,-1,9}, {-3,-1,-6,4,5}};
+
+        assertEquals(result, solution.calculateMinimumHP(dungeon));
+    }
 }
